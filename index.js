@@ -1,41 +1,17 @@
-//ex 3
-const leon = {
-    name: 'Leon',
-    age: 80,
-    post: 'king',
-    sector: 'Africa'
-} 
-class King {
-    constuctor(options) {
-        this.name = options.name
-        this.age =options.age
-        this.sector = options.sector
-    }
-    responsability () {
-        console.log('to sale')
-    }
-} 
-//class King {
-  //  constructor(name, age, sector)
 
-   // .........
+const time = 15000
 
+const week = 10080
+const day = 1440
 
-//ex3.1
-
-const alex = {
-    name:'Alex',
-    age:40,
-    post:'Doctor'
-
+const timeFormat = (remainingTime) => {
+   if(remainingTime/week >=1) {  
+ const weekMark = Math.floor(remainigTime/week) !== 1 ? 'weeks' : 'week'
+ const dayMark = (remainingTime%week)/day > 1 ? 'days' : 'day'
+ return `${Math.floor(remainingTime/week)}${weekMark} ${Mathfloor((remainingTime%week)/day)}${dayMark}`  
+   } 
 }
-const { post, name, age} = alex
- 
-console.log(alex)
-console.log(post)
-console.log(age)
-console.log(name)
-
+console.log(timeFormat(time))
 
 
 
